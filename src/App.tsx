@@ -1,10 +1,12 @@
-function App() {
+import {
+  useEffect,
+  useState,
+} from 'react'
 
+function App() {
   return (
     <>
-      <div className="App">
-        你好
-      </div>
+      <div className="App">你好</div>
     </>
   )
 }
