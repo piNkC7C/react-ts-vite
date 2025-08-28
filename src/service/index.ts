@@ -173,6 +173,14 @@ const createRequest = (baseURL: string, headerAuth?: string, ...args: ICreateReq
               success: true,
               data: res.data,
             }
+          // 成功
+          case 200:
+            // console.log('响应成功', res)
+            // 统一的前端接口返回格式
+            return {
+              success: true,
+              data: res.data,
+            }
           // 登录过期/权限不足 - 使用原始请求配置进行token刷新
           case 401:
             return handleTokenRefresh(response.config, requestInstance)
